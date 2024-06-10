@@ -14,6 +14,7 @@
 	<properties>
 		<munit.version>2.1.2</munit.version>
 		<mule.maven.plugin.version>4.1.2</mule.maven.plugin.version>
+		<app.runtime>4.4.0</app.runtime>
 	</properties>
 
 	<build>
@@ -32,7 +33,9 @@
 				<configuration>
 					<classifier>mule-application</classifier>
 					<cloudHubDeployment>
-				        <muleVersion>4.3.0</muleVersion>
+				        <uri>https://anypoint.mulesoft.com</uri>
+				        <muleVersion>${app.runtime}</muleVersion>
+				        
 				        <username>${env.PLATFORM_USERNAME}</username>
 				        <password>${env.PLATFORM_PASSWORD}</password>
 				        <applicationName>${project.artifactId}-7765657</applicationName>
